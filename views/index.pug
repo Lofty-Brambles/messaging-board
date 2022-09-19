@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  header
+    h1 Welcome to #{title}
+    sub 
+      a(href="./new") Visit to add a post!
+  main
+    each msg in msgArray
+      section
+        h3 @#{msg.user}
+        p= msg.text
+        p.footer= msg.added

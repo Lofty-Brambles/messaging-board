@@ -1,0 +1,10 @@
+extends layout
+
+block content 
+  header 
+    h1 The messaging inputs! 
+    p Shoot your posts here! 
+  form(action="/new" method="post" style="display:flex;flex-direction:column;gap:0.1rem;") 
+    input(type="text" placeholder="Add an author name!" name="authorName" id="author-name" style="width:fit-content;")
+    textarea#body-text(placeholder="Add a message!" name="bodyText" cols="30" rows="10" style="width:fit-content;") Type here!
+    button(type="submit" style="width:fit-content;") Post it!
